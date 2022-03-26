@@ -16,7 +16,7 @@
 }
 
 .wrapper1 {
-  width: 45%;
+  width: 50%;
   height: 100%;
   margin: 0 auto;
 }
@@ -127,7 +127,7 @@
   text-align: center;
 }
 .first_button {
-  width: 100%;
+  width: 60%;
   height: 96px;
   margin: 34px auto;
   padding: 36px 113px 35px 112px;
@@ -135,6 +135,7 @@
   background-color: #124098;
   cursor: pointer;
   border: none;
+  text-align: center;
 }
 
 .first_button > .text {
@@ -150,6 +151,7 @@
   letter-spacing: normal;
   text-align: center;
   color: #fff;
+  
 }
 
 .share_text {
@@ -225,10 +227,15 @@
   color: #124098;
 }
 
-#myProgress {
+.progress-box{
   width: 100%;
   height: 10px;
-  margin: 6px 0px;
+  text-align: center;
+}
+#myProgress {
+  width: 60%;
+  height: 10px;
+  margin: 6px auto;
   border-radius: 5px;
   background-color: #c4c4c4;
 }
@@ -252,7 +259,7 @@
 .progress-number {
   width: 48px;
   height: 24px;
-  margin: 37px 0px 0px 90%;
+  margin: 37px 0px 0px 75%;
   font-family: Pretendard;
   font-size: 16px;
   font-weight: 500;
@@ -265,7 +272,7 @@
 }
 
 .question > .problem {
-  width: 80%;
+  width: 60%;
   height: 120px;
   margin: 94px auto 60px;
   font-family: Pretendard;
@@ -279,10 +286,15 @@
   color: #333;
 }
 
-.question > .answer-button {
+.answer-button-box{
   width: 100%;
   height: 96px;
+  text-align: center;
   margin: 0px auto 34px;
+}
+.answer-button {
+  width: 60%;
+  height: 96px;
   padding: 26px 20px;
   object-fit: contain;
   border-radius: 50px;
@@ -319,7 +331,7 @@
 }
 
 .result > .result-subtitle {
-  width: 80%;
+  width: 100%;
   height: 28px;
   margin: 30px auto 0px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
@@ -335,7 +347,7 @@
 }
 
 .result > .result-title {
-  width: 90%;
+  width: 100%;
   height: 40px;
   margin: 11px auto 0px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
@@ -367,7 +379,7 @@
   height: 20px;
   margin: 28px auto 0px;
   font-family: Pretendard;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
@@ -393,7 +405,7 @@
 }
 
 .result > .result-detail-content {
-  width: 100%;
+  width: 70%;
   height: 40%;
   margin: 8px auto 0px;
   font-family: Pretendard;
@@ -423,7 +435,7 @@
 }
 
 .result > .favorite-content {
-  width: 100%;
+  width: 80%;
   height: 24px;
   margin: 8px auto 0px;
   font-family: Pretendard;
@@ -453,7 +465,7 @@
 }
 
 .result > .dislike-content {
-  width: 100%;
+  width: 80%;
   height: 24px;
   margin: 8px auto 0px;
   font-family: Pretendard;
@@ -468,7 +480,7 @@
 }
 
 .result > .mbti-best-worst-wrapper {
-  width: 100%;
+  width: 70%;
   height: 228px;
   margin: 58px auto 0px;
   text-align: center;

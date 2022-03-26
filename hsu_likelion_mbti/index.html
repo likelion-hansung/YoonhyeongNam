@@ -4,120 +4,140 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property = "og:image" content="image/thumbnail.png">
-    <meta property = "og:title" content="HSU-LikeLion-MBTI">
-    <meta property = "og:description" content="한성대학교 멋쟁이사자처럼 10기가 제작한 MBTI 유형테스트입니다.">
-    <meta property = "og:type" content = "website">
+    <meta property="og:image" content="image/thumbnail.png">
+    <meta property="og:title" content="HSU-LikeLion-MBTI">
+    <meta property="og:description" content="한성대학교 멋쟁이사자처럼 10기가 제작한 MBTI 유형테스트입니다.">
+    <meta property="og:type" content="website">
 
     <title>hsu-likelion-mbti</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 </head>
 
-<body class="desktop" onload = "init()">
-    <div class = "wrapper1">
-        <div class = "wrapper2">
-    <article class="start">
-        <div class="hsu-logo-box" ><img src="image/hsu_logo.png" class = "hsu-logo-image"></div>
-        <div class="title1">나와 닮은</div>
-        <div class="title2">
-            상상부기 프렌즈<span class="text-style-1">는?</span>
+<body class="desktop" onload="init()">
+    <div class="wrapper1">
+        <div class="wrapper2">
+            <article class="start">
+                <div class="hsu-logo-box"><img src="image/hsu_logo.png" class="hsu-logo-image"></div>
+                <div class="title1">나와 닮은</div>
+                <div class="title2">
+                    상상부기 프렌즈<span class="text-style-1">는?</span>
+                </div>
+                <div class="subtitle1">
+                    #상상부기 #한성냥이 #꼬꼬꾸꾸 # 상찌
+                </div>
+                <div class="start-image-box"><img src="image/start_img.png" class="start-img"></div>
+                <div class="detail">
+                    <span class="text-style-1">한성대학교 멋쟁이사자처럼 10기</span>
+                    운영진들과<br>
+                    기획/디자인팀이 제작한 유형테스트 입니다.<br>
+                    많은 참여와 공유 부탁드립니다!
+                </div>
+
+                <div class="button-box"><button type="button" class="first_button" onclick='start();'>
+                        <div class="text">테스트 시작하기</div>
+                    </button><br></div>
+
+            </article>
         </div>
-        <div class="subtitle1">
-            #상상부기 #한성냥이 #꼬꼬꾸꾸 # 상찌
+
+        <div class="wrapper2">
+            <article class="question">
+                <div class="title1">나와 닮은</div>
+                <div class="title2">상상부기 프렌즈는?</div>
+                <div class="progress-number">1/20</div>
+
+                <div class="progress-box">
+                    <div id="myProgress">
+                        <div id="myBar"></div>
+                        <div class="progress-bar-image"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="problem">문제</div>
+
+                <input id="type" type="hidden" value="EI">
+                <div class="answer-button-box"><button id="A" type="button" class="answer-button"><span
+                            class="answer-content">content</span></button></div>
+                <div class="answer-button-box"><button id="B" type="button" class="answer-button"><span
+                            class="answer-content">content</span></button></div>
+            </article>
         </div>
-        <div class = "start-image-box"><img src="image/start_img.png" class="start-img"></div>
-        <div class="detail">
-            <span class="text-style-1">한성대학교 멋쟁이사자처럼 10기</span>
-            운영진들과<br>
-            기획/디자인팀이 제작한 유형테스트 입니다.<br>
-            많은 참여와 공유 부탁드립니다!
+
+
+        <div class="wrapper2">
+            <article class="result">
+                <div class="result-subtitle">캐릭터 설명</div>
+
+                <div class="result-title">title
+                    <span style="color:#124098" class="highlight1">캐릭터 이름</span>
+                </div>
+                <div class="result-mbti-image-box">
+                    <img src="" id="result-mbti-image">
+                </div>
+
+
+                <div class="result-mbti">#INFP</div>
+                <div class="result-detail">&lt; 특징 &gt;</div>
+                <p class="result-detail-content">사교적이고, 타인의 의견을 존중 뭐시기</p>
+
+                <div class="favorite">&lt; 나는 이게 <span style="color :#124098">좋아</span>! &gt;</div>
+                <div class="favorite-content">정성스러운 칭찬</div>
+                <div class="dislike">&lt; 나는 이게 <span style="color :#b53c3c">싫어</span>.. &gt;</div>
+                <div class="dislike-content">잔인한것 ~~~</div>
+
+                <table class="mbti-best-worst-wrapper">
+                    <tr style="height : 28px;">
+                        <td>
+                            <div class="mbti-best-worst"><span style="color: #124098;">최고</span>의 궁합</div>
+                        </td>
+                        <td>
+                            <div class="mbti-best-worst"><span style="color: #b53c3c;">최악</span>의 궁합</div>
+                        </td>
+                    </tr>
+
+                    <tr style="height : 40px; padding-top : 13px;">
+                        <td>
+                            <div class="mbti-best-worst-detail" id="mbti-best-detail">긍정파워 뭐시기</div>
+                        </td>
+                        <td>
+                            <div class="mbti-best-worst-detail" id="mbti-worst-detail">긍정파워 뭐시기</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width : 154px; height : 123px"><img id="mbti-best-image"
+                                class="mbti-best-worst-image" src=""></td>
+                        <td style="width : 154px; height : 123px"><img id="mbti-worst-image"
+                                class="mbti-best-worst-image" src=""></td>
+                    </tr>
+
+                </table>
+
+
+            </article>
         </div>
-
-        <div class ="button-box"><button type="button" class="first_button" onclick='start();'><div class="text">테스트 시작하기</div></button><br></div>
-        
-        </article>
-    </div>
-
-    <div class = "wrapper2">
-    <article class="question">
-        <div class = "title1">나와 닮은</div>
-        <div class = "title2">상상부기 프렌즈는?</div>
-        <div class = "progress-number">1/20</div>
-
-        <div id="myProgress">
-            <div id="myBar"></div>
-            <div class = "progress-bar-image"></div>
-          </div>
-
-        <div class="problem">문제</div>
-
-        <input id="type" type="hidden" value="EI">
-
-        <button id="A" type="button" class="answer-button"><span class = "answer-content">content</span></button>
-        <button id="B" type="button" class="answer-button"><span class = "answer-content">content</span></button>
-    </article>
-    </div>
-
-
-    <div class = "wrapper2">
-    <article class="result">
-        <div class = "result-subtitle">캐릭터 설명</div>
-        
-        <div class = "result-title">title
-            <span style = "color:#124098" class = "highlight1">캐릭터 이름</span>
+        <div class="wrapper2">
+            <article class="share-menu">
+                <div class="share_text">
+                    공유하기
+                </div>
+                <div class="share-image-box">
+                    <img class="insta" src="image/facebook.png" onclick="shareFacebook()">
+                    <img class="kakao" src="image/kakao.png" onclick="sendLink()">
+                    <img class="linkcopy" src="image/linkcopy.png" onclick="clip()">
+                </div>
+            </article>
+            <footer class="copyright">
+                <img class="copyright-logo" src="image/copyright_logo.png">
         </div>
-        <div class = "result-mbti-image-box">
-            <img src = "" id = "result-mbti-image">
-        </div>
-        
-        
-        <div class = "result-mbti">#INFP</div>
-        <div class = "result-detail">&lt; 특징 &gt;</div>
-        <p class = "result-detail-content">사교적이고, 타인의 의견을 존중 뭐시기</p>
-        
-        <div class = "favorite">&lt; 나는 이게 <span style="color :#124098">좋아</span>! &gt;</div>
-        <div class = "favorite-content">정성스러운 칭찬</div>
-        <div class = "dislike">&lt; 나는 이게 <span style="color :#b53c3c">싫어</span>.. &gt;</div>
-        <div class = "dislike-content">잔인한것 ~~~</div>
-        
-        <table class = "mbti-best-worst-wrapper">
-            <tr style = "height : 28px;">
-                <td><div class = "mbti-best-worst"><span style ="color: #124098;">최고</span>의 궁합</div></td>
-                <td><div class = "mbti-best-worst"><span style ="color: #b53c3c;">최악</span>의 궁합</div></td>
-            </tr>
-            
-            <tr style = "height : 40px; padding-top : 13px;">
-                <td><div class = "mbti-best-worst-detail" id = "mbti-best-detail">긍정파워 뭐시기</div></td>
-                <td><div class = "mbti-best-worst-detail" id = "mbti-worst-detail">긍정파워 뭐시기</div></td>
-            </tr>
-            
-            <tr>
-                <td style="width : 154px; height : 123px"><img id="mbti-best-image" class = "mbti-best-worst-image" src=""  ></td>
-                <td style="width : 154px; height : 123px"><img id="mbti-worst-image" class = "mbti-best-worst-image" src="" ></td>
-            </tr>
-
-        </table>
-        
-
-    </article>
-</div>
-    <div class="wrapper2">
-        <article class = "share-menu">
-            <div class = "share_text">
-                공유하기
-            </div>
-            <div class = "share-image-box">
-                <img class = "insta" src = "image/facebook.png" onclick = "shareFacebook()">
-                <img class = "kakao" src = "image/kakao.png" >
-                <img class = "linkcopy" src = "image/linkcopy.png" onclick="clip()">
-            </div>
-        </article>
-        <footer class = "copyright">
-            <img class = "copyright-logo" src = "image/copyright_logo.png"></div>
         </footer>
     </div>
 
-</div>
+    </div>
     <input type="hidden" type="text" id="EI" value="0">
     <input type="hidden" type="text" id="SN" value="0">
     <input type="hidden" type="text" id="TF" value="0">
@@ -135,13 +155,13 @@
         var num = 1; //몇 번 문제
 
         var q = {
-            1: {"tilte": "친구를 만나러 나가려던 참에 급한일이 생겨 못만날 것 같다고 연락이 왔다. 당신의 반응은?", "type": "EI", "A": "딴 애들 연락 돌려봐야겠다", "B": "오히려 좋아 밀린 드라마 정주행해야지"},
-            2: {"title": "팀플을 같이하게 된 친구들과 친해지려 상상파크에 갔다. 이때 당신은? ", "type": "EI", "A": "새로운 대화의 주제를 꺼내면서 열심히 질문한다.", "B": "친구들의 질문에 열심히 대답한다."},
-            3: {"title": "동기들과 학교 앞 방목 1호점에 고기를 먹으러왔다! 이때 당신은?", "type": "EI", "A": "사장님~ 저희 삼겹 목살 반반이요!", "B": "친구가 대신 주문한다."},
-            4: {"title": "같이 밥을 먹기로 한 친구들의 수업이 늦게 끝나게 되어 혼자 밥을 먹게 되었다.", "type": "EI", "A": "혼밥은 역시 학식당이지. 소금구이 덮밥 있으면 좋겠당ㅎㅎ", "B": "좀만 참았다가 집가서 먹어야겠다!"},
-            5: {"title": "수업 내용이 너무 어려워 우울해진 당신.", "type": "EI", "A": "친구들에게 말한다. \"오늘 너무 힘들다.. 와글즈.. 고?\"", "B": "친구들에게 말한다. \"얘들아 나 너무 기빨려.. 빨리 집가서 좀 쉬어야겠다..\" "},
+            1: { "tilte": "친구를 만나러 나가려던 참에 급한일이 생겨 못만날 것 같다고 연락이 왔다. 당신의 반응은?", "type": "EI", "A": "딴 애들 연락 돌려봐야겠다", "B": "오히려 좋아 밀린 드라마 정주행해야지" },
+            2: { "title": "팀플을 같이하게 된 친구들과 친해지려 상상파크에 갔다. 이때 당신은? ", "type": "EI", "A": "새로운 대화의 주제를 꺼내면서 열심히 질문한다.", "B": "친구들의 질문에 열심히 대답한다." },
+            3: { "title": "동기들과 학교 앞 방목 1호점에 고기를 먹으러왔다! 이때 당신은?", "type": "EI", "A": "사장님~ 저희 삼겹 목살 반반이요!", "B": "친구가 대신 주문한다." },
+            4: { "title": "같이 밥을 먹기로 한 친구들의 수업이 늦게 끝나게 되어 혼자 밥을 먹게 되었다.", "type": "EI", "A": "혼밥은 역시 학식당이지. 소금구이 덮밥 있으면 좋겠당ㅎㅎ", "B": "좀만 참았다가 집가서 먹어야겠다!" },
+            5: { "title": "수업 내용이 너무 어려워 우울해진 당신.", "type": "EI", "A": "친구들에게 말한다. \"오늘 너무 힘들다.. 와글즈.. 고?\"", "B": "친구들에게 말한다. \"얘들아 나 너무 기빨려.. 빨리 집가서 좀 쉬어야겠다..\" " },
             6: { "title": "오랜만에 대면수업을 하러 학교에 왔다! 어, 공학관이 어디더라?", "type": "SN", "A": "공학관 갈 때마다 숨이 찼던 기억이.. 저 언덕 위에 있을듯!", "B": "뭐 학교도 오랜만에 온김에 산책이나 할겸 다 둘러보면서 찾아야겠다~!" },
-            7: { "title": "CC인 연인과 상상관 12층에서 노을을 보기로 했는데, 지하철을 반대로 타 늦는다고 한다. 이때 당신은? ", "type": "SN", "A": "음 그럴 수 있지 밤 야경도 좋아", "B":  " 아니 어떻게 그럴수가 있지..? 좀 더 신경 썼으면 이럴 일 없었을텐데.." },
+            7: { "title": "CC인 연인과 상상관 12층에서 노을을 보기로 했는데, 지하철을 반대로 타 늦는다고 한다. 이때 당신은? ", "type": "SN", "A": "음 그럴 수 있지 밤 야경도 좋아", "B": " 아니 어떻게 그럴수가 있지..? 좀 더 신경 썼으면 이럴 일 없었을텐데.." },
             8: { "title": "한성대에 들어온 당신 ! 한성대 마스코트인 상상부기가 반겨주고 있다 이때 당신이 드는 생각은 ?", "type": "SN", "A": "귀엽다, 거북이다, 동그랗다, 파랗다, 누가 만들었지, 성별이 뭐지", "B": "이름이 왜 상상부기지?, 뽀로로랑 친할 것 같다, 아 거북이랑 펭귄이랑은 안친해지나?" },
             9: { "title": "상상빌리지에 살고있는 당신! 오늘은 B1 조리실에 가서 떡볶이 만들기에 도전해볼것이다!", "type": "SN", "A": "백종원님의 떡볶이 레시피 검색! 아 근데 재료가 하나 없네.. 담에 만들어야겠다.. ", "B": "저번에 백종원님 티비 프로에서 어떻게 하는지 다 봐놨지!! 음 설탕이 없네 대신 꿀 넣어야겠당" },
             10: { "title": "친구들과 유형테스트 만들기 프로젝트를 하려고 한다. 오늘은 첫 회의 시간. 뭐부터 정해야하지 ?", "type": "SN", "A": "지금 눈 앞에 있는 세세한 것들부터 정할래 !", "B": "세세한 것 보다는 큰 틀을 먼저 잡자 !" },
@@ -169,7 +189,7 @@
             "ENTP": { "favoirte": "너가 제일 재밌어", "dislike": "", "char": "꼬꼬꾸꾸", "name": "ENTP", "title": "노브레이크 ", "subtitle": "빠꾸없는 자유로운 영혼", "explain": "노브레이크 꼬꼬꾸꾸는 끊임없는 아이디어와 함께 새로운 시도를 합니다.인생은 '재미'라고 생각하기 때문에 하고 싶은게 생기면 즉흥적으로 실행해요. 꼬꼬꾸꾸는 솔직하고 입담이 좋아 프렌즈들에게 항상 새로운 재미를 선사해주기 때문에 인기가 아주 많아요. 다만 솔직한만큼 자신의 의견을 직설적이고 강하게 내새워 자신도 모르게 프렌즈들의 감정을 상하게 할 때도 있어요.<br>어릴 적 부터 어디로 튈지 모르는 행동을 하던 꼬꼬꾸꾸이기 때문에 꼬꼬꾸꾸의 프렌즈들은 한 번씩은 부모님께 꼬꼬꾸꾸와 놀면 안된다는 소리를 들어보았답니다. 하지만 프렌즈들의 우정은 변치않아요♡", "img": "image/mbti/entp.png" },
             "ENTJ": { "favoirte": "결과물에 대한 칭찬", "dislike": "", "char": "꼬꼬꾸꾸", "name": "ENTJ", "title": "조별과제 버스담당 ", "subtitle": "극극극한의 효율쟁이", "explain": "조별과제 버스담당 꼬꼬꾸꾸는  끈기와 책임감이 뛰어나요. 비효율적이고 답답한 걸 싫어해서 맡은 일을 빠르고 정확하게 끝낸답니다. 먼저 나서서 이끄는 것을 좋아하진 않지만, 프렌즈들에게 맡기는 것보단 자신이 하는 것이 낫다고 생각해요. <br> 정신차리면 조장이 돼있는 꼬꼬꾸꾸에요. 논리적이고 카리스마 넘쳐보이지만 사실은 상상력도 풍부하고 은근히 관심 받는 것도 즐긴답니다. ", "img": "image/mbti/entj.png" },
             "ISFP": { "favoirte": "적당한 관심은 꽤나.. 좋은 것 같기도..", "dislike": "갑자기 전화하는거 싫어요.. 용건은 텍스트로..", "char": "상찌", "name": "ISFP", "title": "집돌이 집순이 ", "subtitle": "역시 집이 최고야♡", "explain": "집돌이 집순이 상찌는 집이 제일로 좋아요. 하지만 프렌즈들이 어딜 함께 가자고 할 때 거절은 잘 하지 않는 편이에요. 약속이 취소되면 내심 기뻐할 때도 있지만 막상 만나서는 재밌게 놀다 들어갑니다. <br>프렌즈들과 만나기로 하여 외출을 하는 날은 은행, 미용실, 동사무소 등 상찌가 집에 있는 동안 처리하지 못했던 일들을 모두 처리하는 날이에요. 은근히 개그욕심도 있어 프렌즈들 사이에선 상찌 정말 웃기다는 소리를 들어요. 항상 남들의 의견과 부탁을 잘 들어주는 상찌는 착하다는 소릴 많이 듣는데요, 사실은 기분이 상해도 겉으로 티를 안 낼 뿐이지 마음 속에 쌓아두고 있어요. 남들과 불편한 대화를 하느니 상찌 스스로 삭이는게 낫다고 생각하거든요.", "img": "image/mbti/isfp.png" },
-            "ISFJ": { "favoirte": "", "dislike": "", "char": "한성냥이", "name": "ISFJ", "title": "맑은 영혼 ", "subtitle": "내가 바로 한성대의 나이팅게일", "explain": "하마 설명", "img": "image/mbti/isfj.png" },
+            "ISFJ": { "favoirte": "혼자 노는것도 너무 좋아요", "dislike": "요령 피우는거 싫어요", "char": "한성냥이", "name": "ISFJ", "title": "맑은 영혼 ", "subtitle": "내가 바로 한성대의 나이팅게일", "explain": "맑은 영혼 한성냥이는 프렌즈들 사이에서 가장 차분하고 인내심이 강해요. 프렌즈들의 감정을 잘 파악하기 때문에 공감을 잘해줘요. <br>사려가 깊고 생각도 많은 한성냥이기에 프렌즈들은 고민이 생기면 한성냥이부터 찾아요. 한성냥이도 프렌즈들을 정말 좋아하고 도움을 주고 싶어하기에 한성냥이의 기억력을 총동원하며 최선을 다해 얘기를 들어주어요. 기억력이 좋고 생각이 많은 만큼 약간은 쓸데없는 걱정도 많고 자신에게 엄격하여 사실은 한성냥이도 고민상담이 필요하답니다. 계획을 짜고 메모하는 것을 좋아하는 한성냥이는 자신이 게으르다고 생각하지만 차근차근 계획을 지켜나갑니다.", "img": "image/mbti/isfj.png" },
             "ISTP": { "favoirte": "", "dislike": "", "char": "한성냥이", "name": "ISTP", "title": "침착한 반항아 ", "subtitle": "굳이? 일단은 누워 있을래", "explain": "하마 설명", "img": "image/mbti/istp.png" },
             "ISTJ": { "favoirte": "", "dislike": "", "char": "상찌", "name": "ISTJ", "title": "사실은 있는..! ", "subtitle": "피도 눈물도", "explain": "하마 설명", "img": "image/mbti/istj.png" },
             "INFP": { "favoirte": "먼저 말 걸어주세요", "dislike": "", "char": "상찌", "name": "INFP", "title": "상처가득 쿠크다스 ", "subtitle": "상상부기가 상추를 먹었어..!", "explain": "쿠크다스 상찌는 정이 많은 만큼 상처도 잘 받아요. 자신이 상처를 잘 받는만큼 남들도 많이 받을거라 생각해 쓴소리도 못한답니다. 따라서 프렌즈들의 의견을 대부분 받아들이고, 분위기에 잘 맞추는 편이에요. 귀차니즘력이 강한 상찌지만 꽂히는 취미가 생기면 하루종일 그것만 하기도 해요. 프렌즈들과 놀러가기 전까진 귀찮고 부담스럽지만 막상 만나면 행복한 상찌에요. <br>상상력과 창의력이 풍부한 상찌는 요즘 프렌즈들의 초상화를 그려주는 취미에 푹 빠져있답니다. 스스로 엄청 쎈 상찌라고 생각하지만 프렌즈들이 보기엔 작고 소중하기만 한 상찌에요.", "img": "image/mbti/infp.png" },
@@ -181,12 +201,12 @@
 
 
         function shareFacebook() {
-                var sendUrl = "https://hsu-likelion-mbti.netlify.app/"; // 전달할 URL
-                window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
+            var sendUrl = "https://hsu-likelion-mbti.netlify.app/"; // 전달할 URL
+            window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
         }
 
-        function clip(){
-            
+        function clip() {
+
             var url = 'https://hsu-likelion-mbti.netlify.app/';
             var textarea = document.createElement("textarea");
             document.body.appendChild(textarea);
@@ -198,9 +218,35 @@
             alert("클립보드에 복사되었습니다.")
         }
 
+        Kakao.init('c5b7d83c02df255b32b6938e54fa065b');
+        function sendLink() {
+            Kakao.Link.sendDefault({
+                objectType: 'feed',
+                content: {
+                    title: '나와 닮은 상상부기 프렌즈는?',
+                    description: '#MBTI #상상부기 #한성냥이 #꼬꼬꾸꾸 #상찌 # #HSU #멋사 #운영진수고했다',
+                    imageUrl: 'image/thumbnail.png',
+                    link: {
+                        mobileWebUrl: 'https://hsu-likelion-mbti.netlify.app/',
+                        webUrl: 'https://hsu-likelion-mbti.netlify.app/',
+                    },
+                },
+                buttons: [
+                    {
+                        title: '테스트 하러가기!!',
+                        link: {
+                            mobileWebUrl: 'https://hsu-likelion-mbti.netlify.app/',
+                            webUrl: 'https://hsu-likelion-mbti.netlify.app/',
+                        },
+                    },
+                ],
+            })
+        }
 
 
-        function init(){
+
+
+        function init() {
             $(".start").show();
             $(".question").hide();
             $(".copyright").hide();
@@ -312,7 +358,7 @@
                 ($("#SN").val() < 2) ? mbti += "N" : mbti += "S";
                 ($("#TF").val() < 2) ? mbti += "F" : mbti += "T";
                 ($("#JP").val() < 2) ? mbti += "P" : mbti += "J";
-               
+
 
                 best_worst(mbti);
 
@@ -335,7 +381,7 @@
                 $("#mbti-best-detail").html(result[best_conn]["title"] + "<br/>" + result[best_conn]["char"]);
                 $("#mbti-worst-detail").html(result[worst_conn]["title"] + "<br/>" + result[worst_conn]["char"]);
 
-                $("#mbti-best-image").click(function(e){
+                $("#mbti-best-image").click(function (e) {
                     var convert_mbti = best_conn;
 
                     $(".result-subtitle").html(result[convert_mbti]["subtitle"]); // 서브
@@ -346,7 +392,7 @@
                     $(".favorite-content").html(result[convert_mbti]["favorite"]);
                     $(".dislike-content").html(result[convert_mbti]["dislike"]);
 
-                    
+
                     best_worst(convert_mbti);
 
                     $("#mbti-best-image").attr("src", result[best_conn]["img"]);
@@ -357,7 +403,7 @@
                     $("#mbti-worst-detail").html(result[worst_conn]["title"] + "<br/>" + result[worst_conn]["char"]);
                 })
 
-                $("#mbti-worst-image").click(function(e){
+                $("#mbti-worst-image").click(function (e) {
                     var convert_mbti = worst_conn;
 
                     $(".result-subtitle").html(result[convert_mbti]["subtitle"]); // 서브
@@ -368,7 +414,7 @@
                     $(".favorite-content").html(result[convert_mbti]["favorite"]);
                     $(".dislike-content").html(result[convert_mbti]["dislike"]);
 
-                    
+
                     best_worst(convert_mbti);
 
                     $("#mbti-best-image").attr("src", result[best_conn]["img"]);
@@ -381,9 +427,9 @@
             }
             else {
                 var random = Math.floor(Math.random() * (index.length - 1) + 1);
-                $("#myBar").attr('style', 'width: calc(100/20*'+num+'%)');
+                $("#myBar").attr('style', 'width: calc(100/20*' + num + '%)');
                 $('.progress-bar-image').attr('style', 'margin: 0px 0% 0px calc(100/20 *' + num + '%)')
-                $(".progress-number").html(num +"/20");
+                $(".progress-number").html(num + "/20");
                 $(".problem").html(q[index[random]]["title"]); //문제 1번, 2번 3번 ...
                 $("#type").val(q[index[random]]["type"]); // EI EI EI SN SN SN TF TF TF ...
                 $("#A").html(q[index[random]]["A"]);
@@ -393,7 +439,7 @@
             }
         }
 
-       
+
 
 
     </script>
