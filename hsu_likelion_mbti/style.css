@@ -36,13 +36,13 @@
 .hsu-logo-image {
   width: 165px;
   height: 24px;
-  margin: 0 auto;
+  margin: 0px auto 43px;
 }
 
-.title1 {
+.start > .title {
   width: 100%;
   height: 40px;
-  margin: 60px auto 0px;
+  margin: 17px auto 0px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
   font-family: Jalnan;
   font-size: 40px;
@@ -55,7 +55,7 @@
   color: #000;
 }
 
-.title2 {
+/*.title2 {
   width: 100%;
   height: 40px;
   margin: 17px auto 0px;
@@ -74,6 +74,7 @@
 .title2 > .text-style-1 {
   color: #000;
 }
+*/
 
 .subtitle1 {
   width: 100%;
@@ -90,12 +91,13 @@
   color: #446bb3;
 }
 
-.start-image-box {
+
+.image-box{
   width: 100%;
-  height: 312px;
   text-align: center;
 }
-.start-img {
+
+#start-image {
   width: 312px;
   height: 308px;
   margin: 0 auto;
@@ -362,11 +364,9 @@
   color: #446bb3;
 }
 
-.result > .result-mbti-image-box {
-  width: 100%;
-  height: 309px;
-  text-align: center;
-}
+
+
+
 .result-mbti-image-box > #result-mbti-image {
   width: 324px;
   height: 309px;
