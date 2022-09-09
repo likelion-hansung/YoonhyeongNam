@@ -8,12 +8,12 @@
 }
 
 p{
-    font-size: 18px;
+    font-size: 180px;
 }
 
 .title{
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
-    font-family: Jalnan;
+    font-family: jalnan;
     font-size: 25px;
 }
 
@@ -33,7 +33,7 @@ p{
 }
 
 .startBtn >.text{
-    font-family: Jalnan;
+    font-family: jalnan;
     font-size: 20px;
 }
 

@@ -33,7 +33,7 @@ html {
   margin: 30px auto 0px;*/
   margin-top: 30px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-  font-family: Jalnan;
+  font-family: jalnan;
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
@@ -50,7 +50,7 @@ html {
   margin: 11px auto 0px;*/
   margin-top: 11px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-  font-family: Jalnan;
+  font-family: jalnan;
   font-size: 23px;
   font-weight: normal;
   font-stretch: normal;
@@ -127,7 +127,7 @@ html {
     width: 90%;
     height: 28px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-    font-family: Jalnan;
+    font-family: jalnan;
     font-size: 22px;
     font-weight: normal;
     font-stretch: normal;
@@ -140,7 +140,7 @@ html {
   .mbti_best_detail, .mbti_worst_detail {
     width: 90%;
     height: 40px;
-    font-family: Jalnan;
+    font-family: jalnan;
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
