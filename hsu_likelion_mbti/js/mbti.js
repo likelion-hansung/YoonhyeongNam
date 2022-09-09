@@ -3,7 +3,6 @@ const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
 
 const endPoint = 12;
-const select = [0,0,0,0,0,0,0,0];
 
 
 
@@ -167,7 +166,6 @@ function setResult(){
     var imgURL = mbti_real_result.img;
 
     resultImg.src = imgURL;
-    //resultImg.alt = point;
     resultImg.classList.add('img-fluid');
     imgDiv.appendChild(resultImg);
 
@@ -176,17 +174,14 @@ function setResult(){
 
     const resultDesc1 = document.querySelector('.resultDesc1');
     const resultDescTitle1 = document.querySelector('.resultDescTitle1');
-    //resultDescTitle1.innerHTML = infoList[point].descTitle1;
     resultDesc1.innerHTML = mbti_real_result.explain;
 
     const resultDesc2 = document.querySelector('.resultDesc2');
     const resultDescTitle2 = document.querySelector('.resultDescTitle2');
-    //resultDescTitle1.innerHTML = infoList[point].descTitle1;
     resultDesc2.innerHTML = mbti_real_result.favorite;
 
     const resultDesc3 = document.querySelector('.resultDesc3');
     const resultDescTitle3 = document.querySelector('.resultDescTitle3');
-    //resultDescTitle1.innerHTML = infoList[point].descTitle1;
     resultDesc3.innerHTML = mbti_real_result.dislike;
 
 
@@ -222,7 +217,6 @@ function setResult(){
     var imgURL = mbti_best_result.img;
 
     mbti_best_image.src = imgURL;
-    //resultImg.alt = point;
     mbti_best_image.classList.add('img-fluid');
     imgDiv1.appendChild(mbti_best_image);
 
@@ -231,7 +225,6 @@ function setResult(){
     var imgURL = mbti_worst_result.img;
 
     mbti_worst_image.src = imgURL;
-    //resultImg.alt = point;
     mbti_worst_image.classList.add('img-fluid');
     imgDiv2.appendChild(mbti_worst_image);
 }
