@@ -1,0 +1,186 @@
+html {
+    font-size: 16px;
+}
+
+
+#result{
+    display: none;
+    width:100%;
+    text-align: center;
+}
+
+/* #result{
+    display: none;
+    background-color: whitesmoke;
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+  } */
+
+  /* #shareResult{
+    background-color: whitesmoke;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+  }
+   */
+  
+
+
+.resultIntro{   /*동에번쩍서에번쩍*/
+   /* width: 80%;
+  height: 28px;
+  margin: 30px auto 0px;*/
+  margin-top: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  font-family: Jalnan;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+}
+
+.resultTitle{   /*노는게좋아상상부기*/
+  /*width: 80%;
+  height: 40px;
+  margin: 11px auto 0px;*/
+  margin-top: 11px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  font-family: Jalnan;
+  font-size: 23px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #446bb3;
+}
+
+
+.resultDesc{
+    font-size: 15px;
+    font-family: pretendard;
+  }
+  
+  
+  .resultName{
+    /* width: 100%;
+    height: 20px; */
+    margin: 28px auto 0px;
+    font-family: pretendard;
+    font-size: 15px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #446bb3;
+  }
+
+  .resultInfo{
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    font-family: jalnan;
+    font-size: 25px;
+    color: #333;
+  }
+
+  .resultDescTitle1, .resultDescTitle2,.resultDescTitle3{
+    width: 80%;
+    /* font-size: 18px; */
+  margin: 26px auto 0px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+  }
+  
+  .resultDesc1, .resultDesc2,.resultDesc3{
+    width: 80%;
+    /* font-size: 18px; */
+  margin: 8px auto 0px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+  }
+  
+  .mbti-best-worst-wrapper {
+    width: 100%;
+    height: 228px;
+    margin: 58px auto 0px;
+    text-align: center;
+  }
+
+  .mbti-best-worst {
+    width: 90%;
+    height: 28px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    font-family: Jalnan;
+    font-size: 22px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #333;
+  }
+  
+  .mbti_best_detail, .mbti_worst_detail {
+    width: 90%;
+    height: 40px;
+    font-family: Jalnan;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: center;
+    color: #555;
+  }
+  
+
+  .shareReusltBox{
+    margin-top: 40px;
+  }
+
+  .shareReuslt{
+    font-size: 1.5em; 
+    font-family: GmarketSansMedium;
+    color: #868686;
+  }
+
+  .insta,.kakao,.linkcopy{
+    width: 50px;
+  height: 50px;
+    margin: 3px auto 0px;
+    cursor: pointer;
+  
+}
+
+
+.share_text{
+  /* margin: 42px auto 0px; */
+/* margin-top: 11px; */
+font-family: pretendard;
+font-size: 13px;
+font-weight: 500;
+font-stretch: normal;
+font-style: normal;
+line-height: normal;
+letter-spacing: normal;
+text-align: center;
+color: #585858;
+}
