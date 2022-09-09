@@ -1,0 +1,62 @@
+html {
+    /* font-size: 16px; */
+}
+
+#main{
+    text-align: center;
+    width: 80%;
+}
+
+p{
+    font-size: 1.4vw;
+}
+
+.title{
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+    font-family: Jalnan;
+    font-size: 2.8vw;
+}
+
+.startBtn{
+  padding: 30px 70px;
+  border-radius: 50px;
+  box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: #124098;
+  cursor: pointer;
+  text-align: center;
+}
+
+.startBtn >.text{
+    font-family: Jalnan;
+    font-size: 1.7vw;
+}
+
+.startBtn:hover, .startBtn:active{
+    padding: 30px 70px;
+    border-radius: 50px;
+    background-color: #124098;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+  }
+
+.share_text{
+    /* margin: 42px auto 0px; */
+  /* margin-top: 11px; */
+  font-family: pretendard;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #585858;
+}
+
+.insta,.kakao,.linkcopy{
+    margin: 3px auto 0px;
+    cursor: pointer;
+  
+}
