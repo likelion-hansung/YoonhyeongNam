@@ -137,6 +137,10 @@ html {
     color: #333;
   }
   
+  .mbti_best_image,.mbti_worst_image{
+    cursor: pointer;
+  }
+
   .mbti_best_detail, .mbti_worst_detail {
     width: 90%;
     height: 40px;
@@ -151,16 +155,6 @@ html {
     color: #555;
   }
   
-
-  .shareReusltBox{
-    margin-top: 40px;
-  }
-
-  .shareReuslt{
-    font-size: 1.5em; 
-    font-family: GmarketSansMedium;
-    color: #868686;
-  }
 
   .insta,.kakao,.linkcopy{
     width: 50px;
