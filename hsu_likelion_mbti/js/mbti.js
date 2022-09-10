@@ -202,8 +202,6 @@ function setResult(){
     const mbti_best_result = infoArray.find(find_best_mbti);
     const mbti_worst_result = infoArray.find(find_worst_mbti);
     
-    
-
     const mbti_best_detail = document.querySelector('.mbti_best_detail');
     mbti_best_detail.innerHTML = mbti_best_result.title + mbti_best_result.char;
 
@@ -229,6 +227,78 @@ function setResult(){
     imgDiv2.appendChild(mbti_worst_image);
 }
 
+
+
+document.getElementById("mbti_best_image").addEventListener("click", chanageMBTI);
+document.getElementById("mbti_worst_image").addEventListener("click", chanageMBTI);
+
+
+function chanageMBTI(event){
+    var mbti = event.path[0].src.slice(-8, -4).toUpperCase();
+    console.log(mbti);
+
+    function find_mbti(element){
+        if(element.name === mbti)
+        return true;
+    }
+
+    const mbti_result = infoArray.find(find_mbti);
+
+    const resultNameIntro = document.querySelector('.resultIntro');
+    resultNameIntro.innerHTML = mbti_result.subtitle;
+
+    const resultTitle = document.querySelector('.resultTitle');
+    resultTitle.innerHTML = mbti_result.title + mbti_result.char;
+
+
+    var resultImg = document.querySelector("#resultImg").lastChild;
+
+    var imgURL = mbti_result.img;
+    resultImg.setAttribute("src", imgURL);
+
+    const resultName = document.querySelector('.resultName');
+    resultName.innerHTML = "#"+mbti_result.name;
+
+    const resultDesc1 = document.querySelector('.resultDesc1');
+    resultDesc1.innerHTML = mbti_result.explain;
+
+    const resultDesc2 = document.querySelector('.resultDesc2');
+    resultDesc2.innerHTML = mbti_result.favorite;
+
+    const resultDesc3 = document.querySelector('.resultDesc3');
+    resultDesc3.innerHTML = mbti_result.dislike;
+
+
+    best_worst(mbti);
+
+    function find_best_mbti(element){
+        if(element.name === best_conn)
+        return true;
+    }
+
+    function find_worst_mbti(element){
+        if(element.name === worst_conn)
+        return true;
+    }
+
+    const mbti_best_result = infoArray.find(find_best_mbti);
+    const mbti_worst_result = infoArray.find(find_worst_mbti);
+    
+    const mbti_best_detail = document.querySelector('.mbti_best_detail');
+    mbti_best_detail.innerHTML = mbti_best_result.title + mbti_best_result.char;
+
+    const mbti_worst_detail = document.querySelector('.mbti_worst_detail');
+    mbti_worst_detail.innerHTML = mbti_worst_result.title + mbti_worst_result.char;
+
+
+    var mbti_best_image = document.querySelector("#mbti_best_image").lastChild;
+    var imgURL = mbti_best_result.img;
+    mbti_best_image.setAttribute("src", imgURL);
+
+    var mbti_worst_image = document.querySelector("#mbti_worst_image").lastChild;
+    var imgURL = mbti_worst_result.img;
+    mbti_worst_image.setAttribute("src", imgURL);
+}
 
 
 
