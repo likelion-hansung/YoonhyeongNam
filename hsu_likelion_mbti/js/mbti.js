@@ -229,8 +229,8 @@ function setResult(){
 
 
 
-document.getElementById("mbti_best_image").addEventListener("onclick", chanageMBTI);
-document.getElementById("mbti_worst_image").addEventListener("onclick", chanageMBTI);
+document.getElementById("mbti_best_image").addEventListener("onClick", chanageMBTI);
+document.getElementById("mbti_worst_image").addEventListener("onClick", chanageMBTI);
 
 
 function chanageMBTI(event){
@@ -371,4 +371,5 @@ function clip() {
     document.body.removeChild(textarea);
     alert("클립보드에 복사되었습니다.")
 }
+
 
