@@ -4,11 +4,47 @@ const result = document.querySelector("#result");
 
 const endPoint = 12;
 
+function start(){
+    main.style.WebkitAnimation = "fadeOut 1s";
+    main.style.animation = "fadeOut 1s";
+    setTimeout(()=> {
+        qna.style.WebkitAnimation = "fadeIn 1s";
+        qna.style.animation = "fadeIn 1s";
+        setTimeout(()=>{
+            main.style.display = "none";
+            qna.style.display = "block";
+        },450);
+        let qIdx = 0;
+        goNext(qIdx);
+    },450);
+}
 
+
+
+function goNext(qIdx){
+
+    if(qIdx == endPoint){
+        goResult();
+        return;
+    }
+
+    var q = document.querySelector('.qBox');
+    q.innerHTML = qnaList[qIdx].q;
+
+    for(let i in qnaList[qIdx].a)
+    {
+        addAnswer(qnaList[qIdx].a[i].answer,qIdx,i);
+    }
+    var countstatusNum = document.querySelector('.countStatus');
+    countstatusNum.innerHTML = (qIdx+1)+"/"+endPoint;
+
+    var status = document.querySelector('.statusBar');
+    status.style.width = (100/endPoint)*(qIdx+1)+"%";
+}
 
 function addAnswer(answerText,qIdx,idx){
     var a =document.querySelector('.aBox');
-    var answer = document.createElement('button');
+    var answer = document.createElement('button');  //answer라는 변수에 버튼 생성
 
     answer.classList.add('answerList');
     answer.classList.add('my-5');
@@ -17,7 +53,7 @@ function addAnswer(answerText,qIdx,idx){
 
     answer.classList.add('fadeIn');
 
-    a.appendChild(answer);
+    a.appendChild(answer);  //a에 answer가 소속될 수 있도록
 
     answer.innerHTML = answerText;
 
@@ -51,6 +87,20 @@ function addAnswer(answerText,qIdx,idx){
     },false);
 }   
 
+function goResult(){
+    qna.style.WebkitAnimation = "fadeOut 1s";
+    qna.style.animation = "fadeOut 1s";
+    setTimeout(()=>{
+        result.style.WebkitAnimation = "fadeIn 1s";
+        result.style.animation = "fadeIn 1s";
+        setTimeout(() => {
+            qna.style.display = "none";
+            result.style.display = "block";            
+        }, 450);
+    },450);
+    setResult();
+    
+}
 
 
 function calResult(){
@@ -65,78 +115,6 @@ function calResult(){
         console.log(mbti);
         return mbti;
         
-}
-
-var best_conn = "";
-var worst_conn = "";
-
-function best_worst(mbti_result) {
-    if (mbti_result == "ESFP") {
-        best_conn = "ISTJ"
-        worst_conn = "ENFJ"
-    }
-    else if (mbti_result == "ESTP") {
-        best_conn = "ISFJ"
-        worst_conn = "INFP"
-    }
-    else if (mbti_result == "ESFJ") {
-        best_conn = "ISTP"
-        worst_conn = "ENFP"
-    }
-    else if (mbti_result == "ENFP") {
-        best_conn = "INTJ"
-        worst_conn = "ISTP"
-    }
-    else if (mbti_result == "ENTP") {
-        best_conn = "INFJ"
-        worst_conn = "ISFP"
-    }
-    else if (mbti_result == "ENTJ") {
-        best_conn = "INTP"
-        worst_conn = "INFJ"
-    }
-    else if (mbti_result == "ESTJ") {
-        best_conn = "ISFP"
-        worst_conn = "INFP"
-    }
-    else if (mbti_result == "ENFJ") {
-        best_conn = "INFP"
-        worst_conn = "ISTP"
-    }
-
-
-    else if (mbti_result == "ISFP") {
-        best_conn = "ESTJ"
-        worst_conn = "ENTP"
-    }
-    else if (mbti_result == "ISFJ") {
-        best_conn = "ESTP"
-        worst_conn = "INFP"
-    }
-    else if (mbti_result == "ISTP") {
-        best_conn = "ESFJ"
-        worst_conn = "ENFP"
-    }
-    else if (mbti_result == "ISTJ") {
-        best_conn = "ESFP"
-        worst_conn = "ENFJ"
-    }
-    else if (mbti_result == "INFP") {
-        best_conn = "ENFJ"
-        worst_conn = "ESTP"
-    }
-    else if (mbti_result == "INFJ") {
-        best_conn = "ENTP"
-        worst_conn = "ESTJ"
-    }
-    else if (mbti_result == "INTP") {
-        best_conn = "ENTJ"
-        worst_conn = "ESFP"
-    }
-    else if (mbti_result == "INTJ") {
-        best_conn = "ENFP"
-        worst_conn = "ESFJ"
-    }
 }
 
 function setResult(){
@@ -225,6 +203,80 @@ function setResult(){
 }
 
 
+var best_conn = "";
+var worst_conn = "";
+
+function best_worst(mbti_result) {
+    if (mbti_result == "ESFP") {
+        best_conn = "ISTJ"
+        worst_conn = "ENFJ"
+    }
+    else if (mbti_result == "ESTP") {
+        best_conn = "ISFJ"
+        worst_conn = "INFP"
+    }
+    else if (mbti_result == "ESFJ") {
+        best_conn = "ISTP"
+        worst_conn = "ENFP"
+    }
+    else if (mbti_result == "ENFP") {
+        best_conn = "INTJ"
+        worst_conn = "ISTP"
+    }
+    else if (mbti_result == "ENTP") {
+        best_conn = "INFJ"
+        worst_conn = "ISFP"
+    }
+    else if (mbti_result == "ENTJ") {
+        best_conn = "INTP"
+        worst_conn = "INFJ"
+    }
+    else if (mbti_result == "ESTJ") {
+        best_conn = "ISFP"
+        worst_conn = "INFP"
+    }
+    else if (mbti_result == "ENFJ") {
+        best_conn = "INFP"
+        worst_conn = "ISTP"
+    }
+
+
+    else if (mbti_result == "ISFP") {
+        best_conn = "ESTJ"
+        worst_conn = "ENTP"
+    }
+    else if (mbti_result == "ISFJ") {
+        best_conn = "ESTP"
+        worst_conn = "INFP"
+    }
+    else if (mbti_result == "ISTP") {
+        best_conn = "ESFJ"
+        worst_conn = "ENFP"
+    }
+    else if (mbti_result == "ISTJ") {
+        best_conn = "ESFP"
+        worst_conn = "ENFJ"
+    }
+    else if (mbti_result == "INFP") {
+        best_conn = "ENFJ"
+        worst_conn = "ESTP"
+    }
+    else if (mbti_result == "INFJ") {
+        best_conn = "ENTP"
+        worst_conn = "ESTJ"
+    }
+    else if (mbti_result == "INTP") {
+        best_conn = "ENTJ"
+        worst_conn = "ESFP"
+    }
+    else if (mbti_result == "INTJ") {
+        best_conn = "ENFP"
+        worst_conn = "ESFJ"
+    }
+}
+
+
+
 
 document.getElementById("mbti_best_image").addEventListener("click", chanageMBTI);
 document.getElementById("mbti_worst_image").addEventListener("click", chanageMBTI);
@@ -295,60 +347,6 @@ function chanageMBTI(event){
     var mbti_worst_image = document.querySelector("#mbti_worst_image").lastChild;
     var imgURL = mbti_worst_result.img;
     mbti_worst_image.setAttribute("src", imgURL);
-}
-
-
-
-function goResult(){
-    qna.style.WebkitAnimation = "fadeOut 1s";
-    qna.style.animation = "fadeOut 1s";
-    setTimeout(()=>{
-        result.style.WebkitAnimation = "fadeIn 1s";
-        result.style.animation = "fadeIn 1s";
-        setTimeout(() => {
-            qna.style.display = "none";
-            result.style.display = "block";            
-        }, 450);
-    },450);
-    setResult();
-    
-}
-
-
-function goNext(qIdx){
-
-    if(qIdx == endPoint){
-        goResult();
-        return;
-    }
-
-    var q = document.querySelector('.qBox');
-    q.innerHTML = qnaList[qIdx].q;
-
-    for(let i in qnaList[qIdx].a)
-    {
-        addAnswer(qnaList[qIdx].a[i].answer,qIdx,i);
-    }
-    var countstatusNum = document.querySelector('.countStatus');
-    countstatusNum.innerHTML = (qIdx+1)+"/"+endPoint;
-
-    var status = document.querySelector('.statusBar');
-    status.style.width = (100/endPoint)*(qIdx+1)+"%";
-}
-
-function start(){
-    main.style.WebkitAnimation = "fadeOut 1s";
-    main.style.animation = "fadeOut 1s";
-    setTimeout(()=> {
-        qna.style.WebkitAnimation = "fadeIn 1s";
-        qna.style.animation = "fadeIn 1s";
-        setTimeout(()=>{
-            main.style.display = "none";
-            qna.style.display = "block";
-        },450);
-        let qIdx = 0;
-        goNext(qIdx);
-    },450);
 }
 
 function shareFacebook() {
