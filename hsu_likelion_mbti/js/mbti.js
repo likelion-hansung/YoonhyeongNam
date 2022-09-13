@@ -229,8 +229,8 @@ function setResult(){
 
 
 
-document.getElementById("mbti_best_image").addEventListener("onClick", chanageMBTI);
-document.getElementById("mbti_worst_image").addEventListener("onClick", chanageMBTI);
+document.getElementById("mbti_best_image").addEventListener("onclick", chanageMBTI);
+document.getElementById("mbti_worst_image").addEventListener("onclick", chanageMBTI);
 
 
 function chanageMBTI(event){
