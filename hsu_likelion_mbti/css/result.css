@@ -4,23 +4,10 @@
     text-align: center;
 }
 
-/* #result{
-    display: none;
-    background-color: whitesmoke;
-    width: 50%;
+#shareResult{
+  width:100%;
     text-align: center;
-    border-radius: 20px;
-  } */
-
-  /* #shareResult{
-    background-color: whitesmoke;
-    width: 80%;
-    text-align: center;
-    border-radius: 20px;
-  }
-   */
-  
-
+}
 
 .resultIntro{   /*동에번쩍서에번쩍*/
    /* width: 80%;
