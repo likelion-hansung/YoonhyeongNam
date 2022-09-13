@@ -5,19 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-
-
-
+    <!-- Open Graph 미리보기 정보 노출(썸네일 등) -->
     <meta property="og:image" content="./img/thumbnail.png">
     <meta property="og:title" content="HSU-LikeLion-MBTI">
     <meta property="og:description" content="한성대학교 멋쟁이사자처럼 10기가 제작한 MBTI 유형테스트입니다.">
     <meta property="og:type" content="website">
-
+    
     <title>상상부기 프렌즈 유형 테스트</title>
+
+    <!-- [Bootstrap] -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Kakao 공유 위함 -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
+    
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHBHZHX5BC"></script>
@@ -29,9 +33,32 @@
         gtag('config', 'G-ZHBHZHX5BC');
     </script>
 
+<script type="text/javascript">
+    // F12 버튼 방지
+    $(document).ready(function(){
+        $(document).bind('keydown',function(e){
+            if ( e.keyCode == 123 /* F12 */) {
+                e.preventDefault();
+                e.returnValue = false;
+            }
+        });
+    });
+    
+    // 우측 클릭 방지
+    document.onmousedown=disableclick;
+    status="Right click is not available.";
+    
+    function disableclick(event){
+        if (event.button==2) {
+            alert(status);
+            return false;
+        }
+    }
+</script>
 </head>
 
 <body>
+    <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
     <section id="main" class="my-5 py-5 px-4 mx-auto">
         <div class="col-lg-2 col-md-3 col-sm-3 mx-auto mb-3">
             <img src="./img/hsu_logo.png" alt="hsu_logo_img" class="img-fluid" />
