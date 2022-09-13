@@ -50,7 +50,7 @@
         
         // 우측 클릭 방지
         document.onmousedown=disableclick;
-        status="Right click is not available.";
+        status="우클릭은 사용 금지입니다 0_<";
         
         function disableclick(event){
             if (event.button==2) {
@@ -85,9 +85,9 @@
 
         <div class="share">
             <div class="share_text mt-3">공유하기</div>
-            <img class="facebook col-lg-1 col-md-2 col-sm-3" src="img/facebook.png" onclick="js:shareFacebook()">
-            <img class="kakao col-lg-1 col-md-2 col-sm-3" src="img/kakao.png" onclick="js:sendLink()">
-            <img class="linkcopy col-lg-1 col-md-2 col-sm-3" src="img/linkcopy.png" onclick="js:clip()">
+            <img class="facebook col-lg-1 col-md-2 col-sm-2 img-fluid" src="img/facebook.png" onclick="js:shareFacebook()">
+            <img class="kakao col-lg-1 col-md-2 col-sm-2 img-fluid" src="img/kakao.png" onclick="js:sendLink()">
+            <img class="linkcopy col-lg-1 col-md-2 col-sm-2 img-fluid" src="img/linkcopy.png" onclick="js:clip()">
         </div>
     </section>
 

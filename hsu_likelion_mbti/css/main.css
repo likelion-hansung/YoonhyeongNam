@@ -32,6 +32,7 @@ p{
 .startBtn >.text{
     font-family: jalnan;
     font-size: 20px;
+    
 }
 
 .startBtn:hover, .startBtn:active{
@@ -42,6 +43,8 @@ p{
     cursor: pointer;
     text-align: center;
   }
+
+
 
 .share_text{
     /* margin: 42px auto 0px; */
@@ -58,8 +61,8 @@ p{
 }
 
 .insta,.kakao,.linkcopy{
-    width: 50px;
-  height: 50px;
+    /* width: 50px;
+  height: 50px; */
     margin: 3px auto 0px;
     cursor: pointer;
   
