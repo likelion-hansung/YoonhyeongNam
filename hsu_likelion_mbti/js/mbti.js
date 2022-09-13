@@ -173,15 +173,12 @@ function setResult(){
     resultName.innerHTML = "#"+mbti_real_result.name;
 
     const resultDesc1 = document.querySelector('.resultDesc1');
-    const resultDescTitle1 = document.querySelector('.resultDescTitle1');
     resultDesc1.innerHTML = mbti_real_result.explain;
 
     const resultDesc2 = document.querySelector('.resultDesc2');
-    const resultDescTitle2 = document.querySelector('.resultDescTitle2');
     resultDesc2.innerHTML = mbti_real_result.favorite;
 
     const resultDesc3 = document.querySelector('.resultDesc3');
-    const resultDescTitle3 = document.querySelector('.resultDescTitle3');
     resultDesc3.innerHTML = mbti_real_result.dislike;
 
 

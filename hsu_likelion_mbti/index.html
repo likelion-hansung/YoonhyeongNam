@@ -10,6 +10,7 @@
     <meta property="og:title" content="HSU-LikeLion-MBTI">
     <meta property="og:description" content="한성대학교 멋쟁이사자처럼 10기가 제작한 MBTI 유형테스트입니다.">
     <meta property="og:type" content="website">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     
     <title>상상부기 프렌즈 유형 테스트</title>
 
@@ -33,28 +34,28 @@
         gtag('config', 'G-ZHBHZHX5BC');
     </script>
 
-<script type="text/javascript">
-    // F12 버튼 방지
-    $(document).ready(function(){
-        $(document).bind('keydown',function(e){
-            if ( e.keyCode == 123 /* F12 */) {
-                e.preventDefault();
-                e.returnValue = false;
-            }
+    <script type="text/javascript">
+        // F12 버튼 방지
+        $(document).ready(function(){
+            $(document).bind('keydown',function(e){
+                if ( e.keyCode == 123 /* F12 */) {
+                    e.preventDefault();
+                    e.returnValue = false;
+                }
+            });
         });
-    });
-    
-    // 우측 클릭 방지
-    document.onmousedown=disableclick;
-    status="Right click is not available.";
-    
-    function disableclick(event){
-        if (event.button==2) {
-            alert(status);
-            return false;
+        
+        // 우측 클릭 방지
+        document.onmousedown=disableclick;
+        status="Right click is not available.";
+        
+        function disableclick(event){
+            if (event.button==2) {
+                alert(status);
+                return false;
+            }
         }
-    }
-</script>
+    </script>
 </head>
 
 <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
@@ -79,9 +80,9 @@
         </p>
         <button type="button mt-3" class="startBtn btn jalnan" onClick="js:start()">테스트 시작하기</button>
 
-        <div class="share ">
+        <div class="share">
             <div class="share_text mt-3">공유하기</div>
-            <img class="insta col-lg-1 col-md-2 col-sm-3" src="img/facebook.png" onclick="js:shareFacebook()">
+            <img class="facebook col-lg-1 col-md-2 col-sm-3" src="img/facebook.png" onclick="js:shareFacebook()">
             <img class="kakao col-lg-1 col-md-2 col-sm-3" src="img/kakao.png" onclick="js:sendLink()">
             <img class="linkcopy col-lg-1 col-md-2 col-sm-3" src="img/linkcopy.png" onclick="js:clip()">
         </div>
