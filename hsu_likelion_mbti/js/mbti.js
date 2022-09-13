@@ -19,8 +19,6 @@ function start(){
     },450);
 }
 
-
-
 function goNext(qIdx){
 
     if(qIdx == endPoint){
@@ -60,8 +58,8 @@ function addAnswer(answerText,qIdx,idx){
     answer.addEventListener("click",function(){
         var children = document.querySelectorAll('.answerList');
         for(let i=0; i<children.length;i++){
+            //클릭시 질문 버튼 사라지게
             children[i].disabled = true;
-
             children[i].style.WebkitAnimation = "fadeOut 0.5s";
             children[i].style.Animation = "fadeOut 0.5s";
         }
