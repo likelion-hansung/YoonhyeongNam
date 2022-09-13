@@ -26,7 +26,9 @@
 
     <!-- Kakao 공유 위함 -->
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-
+    <script>
+        Kakao.init('c5b7d83c02df255b32b6938e54fa065b');
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHBHZHX5BC"></script>
     <script>
@@ -202,7 +204,7 @@
             <div class="share ">
                 <div class="share_text mt-3">공유하기</div>
                 <img class="facebook col-lg-1 col-md-1 col-sm-2" src="img/facebook.png" onclick="js:shareFacebook()">
-                <img class="kakao col-lg-1 col-md-1 col-sm-2" src="img/kakao.png" onclick="sendLink()">
+                <img class="kakao col-lg-1 col-md-1 col-sm-2" src="img/kakao.png" onclick="js:sendLink()">
                 <img class="linkcopy col-lg-1 col-md-1 col-sm-2" src="img/linkcopy.png" onclick="js:clip()">
             </div>
 
@@ -217,32 +219,7 @@
 
     <script src="./js/mbti.js" ;></script>
     <script src="./js/data.js"></script>
-    <script>
-        Kakao.init('c5b7d83c02df255b32b6938e54fa065b');
-        function sendLink() {
-            Kakao.Link.sendDefault({
-                objectType: 'feed',
-                content: {
-                    title: '나와 닮은 상상부기 프렌즈는?',
-                    description: '#MBTI #상상부기 #한성냥이 #꼬꼬꾸꾸 #상찌 # #HSU #멋사 #운영진수고했다',
-                    imageUrl: './img/thumbnail.png',
-                    link: {
-                        mobileWebUrl: 'https://hsu-likelion-mbti.netlify.app/',
-                        webUrl: 'https://hsu-likelion-mbti.netlify.app/',
-                    },
-                },
-                buttons: [
-                    {
-                        title: '테스트 하러가기!!',
-                        link: {
-                            mobileWebUrl: 'https://hsu-likelion-mbti.netlify.app/',
-                            webUrl: 'https://hsu-likelion-mbti.netlify.app/',
-                        },
-                    },
-                ],
-            })
-        }
-    </script>
+    <script src="./js/share.js"></script>
 
 </body>
 

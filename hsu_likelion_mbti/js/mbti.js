@@ -347,22 +347,5 @@ function chanageMBTI(event){
     mbti_worst_image.setAttribute("src", imgURL);
 }
 
-function shareFacebook() {
-    var sendUrl = "https://hsu-likelion-mbti.netlify.app/"; // 전달할 URL
-    window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
-}
-
-function clip() {
-
-    var url = 'https://hsu-likelion-mbti.netlify.app/';
-    var textarea = document.createElement("textarea");
-    document.body.appendChild(textarea);
-    /* url = window.document.location.href;*/
-    textarea.value = url;
-    textarea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textarea);
-    alert("클립보드에 복사되었습니다.")
-}
 
 
