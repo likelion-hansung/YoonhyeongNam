@@ -12,7 +12,7 @@
     <meta property="og:description" content="한성대학교 멋쟁이사자처럼 10기가 제작한 MBTI 유형테스트입니다.">
     <meta property="og:type" content="website">
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-    
+
     <title>상상부기 프렌즈 유형 테스트</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/animation.css">
@@ -41,21 +41,21 @@
 
     <script type="text/javascript">
         // F12 버튼 방지
-        $(document).ready(function(){
-            $(document).bind('keydown',function(e){
-                if ( e.keyCode == 123 /* F12 */) {
+        $(document).ready(function () {
+            $(document).bind('keydown', function (e) {
+                if (e.keyCode == 123 /* F12 */) {
                     e.preventDefault();
                     e.returnValue = false;
                 }
             });
         });
-        
+
         // 우측 클릭 방지
-        document.onmousedown=disableclick;
-        status="우클릭은 사용 금지입니다 ฅʕ•ㅅ•ʔฅ 어흥~";
-        
-        function disableclick(event){
-            if (event.button==2) {
+        document.onmousedown = disableclick;
+        status = "우클릭은 사용 금지입니다 ฅʕ•ㅅ•ʔฅ 어흥~";
+
+        function disableclick(event) {
+            if (event.button == 2) {
                 alert(status);
                 return false;
             }
@@ -68,7 +68,7 @@
         <div class="col-lg-2 col-md-3 col-sm-3 mx-auto mb-3">
             <img src="./img/hsu_logo.png" alt="hsu_logo_img" class="img-fluid" />
         </div>
-        <h1 class="title">나와 닮은<br>
+        <h1 class="title">나와 하나도 닮은<br>
             <span style="color:#124098">상상부기 프렌즈</span>는?
         </h1>
         <div class="hashtag">
@@ -87,7 +87,8 @@
 
         <div class="share">
             <div class="share_text mt-3">공유하기</div>
-            <img class="facebook col-lg-1 col-md-1 col-sm-2 img-fluid" src="img/facebook.png" onclick="js:shareFacebook()">
+            <img class="facebook col-lg-1 col-md-1 col-sm-2 img-fluid" src="img/facebook.png"
+                onclick="js:shareFacebook()">
             <img class="kakao col-lg-1 col-md-1 col-sm-2 img-fluid" src="img/kakao.png" onclick="js:sendLink()">
             <img class="linkcopy col-lg-1 col-md-1 col-sm-2 img-fluid" src="img/linkcopy.png" onclick="js:clip()">
         </div>
@@ -203,7 +204,8 @@
 
             <div class="share ">
                 <div class="share_text mt-3">공유하기</div>
-                <img class="facebook col-lg-1 col-md-1 col-sm-2 img-fluid" src="img/facebook.png" onclick="js:shareFacebook()">
+                <img class="facebook col-lg-1 col-md-1 col-sm-2 img-fluid" src="img/facebook.png"
+                    onclick="js:shareFacebook()">
                 <img class="kakao col-lg-1 col-md-1 col-sm-2 img-fluid" src="img/kakao.png" onclick="js:sendLink()">
                 <img class="linkcopy col-lg-1 col-md-1 col-sm-2 img-fluid" src="img/linkcopy.png" onclick="js:clip()">
             </div>

@@ -103,7 +103,6 @@ function goResult(){
 
 function calResult(){
     var mbti = "";
-        //($("#EI").val() < 2) ? mbti += "I" : mbti += "E";
     
         parseInt(document.getElementById("EI").getAttribute('value')) <1 ? mbti += "I" : mbti += "E";
         parseInt(document.getElementById("SN").getAttribute('value')) <1 ? mbti += "N" : mbti += "S";

@@ -1,9 +1,10 @@
-
+//페이스북 공유
 function shareFacebook() {
     var sendUrl = "https://hsu-likelion-mbti.netlify.app/"; // 전달할 URL
     window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
 }
 
+//카카오톡 공유
 function sendLink() {
     Kakao.Link.sendDefault({
         objectType: 'feed',
@@ -28,12 +29,12 @@ function sendLink() {
     })
 }
 
+//클립보드에 복사
 function clip() {
 
     var url = 'https://hsu-likelion-mbti.netlify.app/';
     var textarea = document.createElement("textarea");
     document.body.appendChild(textarea);
-    /* url = window.document.location.href;*/
     textarea.value = url;
     textarea.select();
     document.execCommand("copy");
